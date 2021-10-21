@@ -10,13 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         .text {
             font-family: 'Rubik', sans-serif;
             font-weight: 400;
             margin-top: 0;
             margin-bottom: 4px;
             font-size: 14px;
-            padding-left: 5px;
+            padding-left: 15px;
             padding-top: 0px;
         }
         
@@ -25,7 +29,6 @@
             margin-top: 0;
             margin-bottom: 12px;
             font-size: 24px;
-            padding-left: 5px;
             padding-top: 4px;
             color: #535353;
         }
@@ -36,7 +39,7 @@
             color: #ff7300;
         }
         
-        .txtmedium {
+        .txtmedium a {
             font-weight: 500;
             font-size: 14px;
             color: #828282;
@@ -59,34 +62,40 @@
         
         .table-img {
             width: 1px;
-            height: 120px;
-            /* border-right: rgb(6, 6, 95) 3px solid; */
+            height: 180px;
+            /*border-right: #ff7300 3px solid;*/
+            border-bottom: 0px;
         }
         
         table {
-            width: 850;
+            padding: 0px;
+            width: 900;
+            height: 180px;
+            border-spacing: 0px;
+            border-collapse: collapse;
         }
         
         .img {
             height: 180px;
+            padding-right: 10px;
+            border-right: #ff7300 3px solid;
         }
     </style>
 </head>
 
 <body>
-    <!-- chupalo-->
     <table>
         <caption></caption>
         <th id="hidden"></th>
-        <tr>
+        <tr height=180px>
             <td class="table-img">
-                <a href="https://www.Adalid.cl" target="_blank"><img src="https://raw.githubusercontent.com/Kessillox/firma/master/FIRMA_2021.png" alt="Imagen logos Adalid y spin off" class="img"></a>
+                <img src="https://raw.githubusercontent.com/Kessillox/firma/master/FONDO_2021_FINAL.jpg" alt="Imagen logos Adalid y spin off" class="img">
             </td>
             <td class="table-text">
                 <p class="text textname">Felipe Esteban Alejandro Kessi Bustos</p>
                 <p class="text textcargo"> Coordinador Acad&eacute;mico </p>
-                <p class="text txtmedium"> felipe.kessi@adalid.cl </p>
                 <p class="text txtmedium"> +56 9 8779 3634</p>
+                <p class="text txtmedium"> Av. Santa María 0816, Providencia </p>
                 <p class="text txtpage">
                     <a href="https://adalid.cl"> www.adalid.cl</a></p>
                 <p class="text txtpais">España | Chile | Colombia</p>
