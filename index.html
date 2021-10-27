@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmas Adalid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div id="app">
+
+        <header class="bar">
+            <img src="https://www.adalid.cl/wp-content/uploads/2020/10/logo-adalid.svg" alt="">
+            <h1>Genera tu firma</h1>
+        </header>
+        <form class="userForm">
+            <h2>Ingresa tus datos</h2>
+            <div class="userForm__group">
+                <input v-model="fullName" type="text" name="name" id="name" required>
+                <label for="name">Nombre</label>
+            </div>
+            <div class="userForm__group">
+                <input v-model="job" type="text" name="job" id="job" required>
+                <label for="job">Cargo</label>
+            </div>
+            <div class="userForm__group">
+                <input v-model="cellphone" type="text" name="number" id="number" required>
+                <label for="number">Número</label>
+            </div>
+            <div class="userForm__group">
+                <select v-model="selected" name="organization" required id="organization">
+                    <option selected disabled hidden></option>
+                    <option value="Adalid">Adalid</option>
+                    <option value="Awakelab">Awakelab</option>
+                </select>
+                <label for="organization">Organización</label>
+            </div>
+        </form>
+        <section v-if="selected == 'Adalid'" class="firma">
+            <h4>Haz click en tu firma para copiarla</h4>
+            <table id="sign" data-clipboard-target="#sign">
+                <caption></caption>
+                <th id="hidden"></th>
+                <tr height=180px>
+                    <td class="table-img">
+                        <img src="https://raw.githubusercontent.com/Kessillox/firma/master/FIRMA_2021_FINAL.png" alt="Imagen logos Adalid y spin off" class="img">
+                    </td>
+                    <td class="table-text">
+                        <p class="text textname">{{fullName}}</p>
+                        <p class="text textcargo">{{job}}</p>
+                        <p class="text txtmedium"> <img src="https://raw.githubusercontent.com/Kessillox/firma/master/TELEFONO_NARANJA.png" alt="telefono" height="13px" class="svg">{{cellphone}}</p>
+                        <p class="text txtmedium"> Av. Santa María 0816, Providencia </p>
+                        <p class="text txtpage">
+                            <a href="https://adalid.cl"> www.adalid.cl</a></p>
+                        <p class="text txtpais">España | Chile | Colombia</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section v-else-if="selected == 'Awakelab'" class="firma">
+            <table id="sign" data-clipboard-target="#sign">
+                <caption></caption>
+                <th id="hidden"></th>
+                <tr height=180px>
+                    <td class="table-img">
+                        <img src="https://github.com/Kessillox/firma/blob/master/FIRMA_AWAKELAB_2021.png?raw=true" alt="Imagen logo Awakelab by Adalid" class="img awakelab">
+                    </td>
+                    <td class="table-text">
+                        <p class="text textname">{{fullName}}</p>
+                        <p class="text textcargo awakelab"> {{job}} </p>
+                        <p class="text txtmedium"><img src="https://raw.githubusercontent.com/Kessillox/firma/master/TELEFONO.png" alt="telefono" height="13px" class="svg"> {{cellphone}} </p>
+                        <p class="text txtmedium"><img src="https://raw.githubusercontent.com/Kessillox/firma/master/WHATSAPP.png" alt="whatsapp" height="13px" class="svg"> {{cellphone}} </p>
+                        <p class="text txtpage">
+                            <a class="awakelab" href="https://awakelab.cl"> www.awakelab.cl</a></p>
+                        <p class="text txtpais">España | Chile | Colombia</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./assets/js/copy.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
