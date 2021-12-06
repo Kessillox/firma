@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #535353;
+    background: #d3d3d3;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar {
+    padding: 1rem 2rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0px 10px #aaaaaa;
+    background-color: white;
+}
+
+.bar img {
+    height: 100%;
+}
+
+.userForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 25%;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: -2px 2px 8px #aaa;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.userForm h2 {
+    text-align: center;
+}
+
+.userForm__group {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.userForm__group label,
+.userForm__group input,
+.userForm__group select {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    justify-content: center;
+}
+
+.userForm__group input,
+select {
+    background: transparent;
+    height: 2rem;
+    border-bottom: 1px solid #535353;
+    padding: 0 .5rem;
+    color: #535353;
+}
+
+.userForm__group label {
+    margin-bottom: -1.5rem;
+}
+
+.userForm__group input:focus,
+.userForm__group select:focus {
+    outline: none;
+    border-bottom: 1px solid #F1891B;
+}
+
+.userForm__group input:focus+label,
+.userForm__group select:focus+label {
+    color: #F1891B;
+    margin-bottom: .2rem;
+    transition: margin-bottom .3s;
+}
+
+.userForm__group input:valid:not(:focus)+label,
+.userForm__group select:valid:not(:focus)+label {
+    color: #535353;
+    margin-bottom: .2rem;
+}
+
+select {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+
+/* FIRMA ADALID */
+
+.firma {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.text {
+    font-family: 'Rubik', sans-serif;
+    margin: 0 0 4px 15px;
+    font-size: 14px;
+}
+
+.textname {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: #535353;
+}
+
+.textcargo {
+    font-weight: bold;
+    font-size: 16px;
+    color: #d41c34;
+}
+
+.txtmedium,
+.textmedium a {
+    color: #828282;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.txtpage a {
+    font-weight: 500;
+    color: #d41c34;
+    text-decoration: none;
+}
+
+.txtpais {
+    color: #828282;
+    text-decoration: none;
+}
+
+table {
+    padding: 0px;
+    border-spacing: 0px;
+}
+
+.img {
+    height: 180px;
+    padding-right: 10px;
+    border-right: #148054 3px solid;
+}
+
+.svg {
+    padding-right: 6px;
+}
+
+
+/* Firma Awakelab */
+
+.awakelab,
+a.awakelab {
+    color: #32ccd0;
+}
+
+.img.awakelab {
+    border-right: #32ccd0 3px solid;
+}
